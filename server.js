@@ -29,6 +29,10 @@ var tokenGen = require('./jwt/token')
 
 var passport = require('passport');
 
+//Added to handle self-signed certs
+require('https').globalAgent.options.rejectUnauthorized = false;
+//End addition
+
 console.log(process.env);
 var client_id = process.env.OIDC_ID;
 var client_secret = process.env.OIDC_SECRET;
