@@ -30,7 +30,7 @@ var tokenGen = require('./jwt/token')
 var passport = require('passport');
 
 //Added to handle self-signed certs
-require('https').globalAgent.options.rejectUnauthorized = false;
+var https = require('https').globalAgent.options.rejectUnauthorized = false;
 //End addition
 
 console.log(process.env);
