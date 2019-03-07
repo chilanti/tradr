@@ -108,7 +108,7 @@ app.get('/tradr/login', passport.authenticate('openidconnect', {}));
 //app.use('/tradr', ensureAuthenticated, express.static(path.join(__dirname, 'dist')));
 app.get('/tradr', function (req, res) {
 	  res.send('hello world')
-	})
+	});
 // Allow CORS
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
